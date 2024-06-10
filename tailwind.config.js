@@ -11,7 +11,11 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "background-image": "url('/images/background.jpeg')",
       },
+      spacing: {
+        "min-64": "-64px"
+      }
     },
   },
   plugins: [],
