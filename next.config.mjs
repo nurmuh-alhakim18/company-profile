@@ -5,8 +5,12 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'randomuser.me',
-        port: '',
         pathname: '/api/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'images.ctfassets.net',
+        pathname: '/ip1zhjowyeys/**',
       },
     ],
   },

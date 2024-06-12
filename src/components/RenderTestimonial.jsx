@@ -1,17 +1,29 @@
-"use client"
-
-import { useSelector } from "react-redux"
 import Testimonial from "./Testimonial"
+import { createClient } from "contentful"
 
-export default function RenderProduct() {
-  const customers = useSelector((state) => state.customers)
-  const toRender = customers.slice(0, 3)
+export async function getTestimonials() {
+  try {
+    const client = createClient({
+      space: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    })
 
+    const res = await client.getEntries({ content_type: "productReview" })
+
+    return res.items
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+export default async function RenderProduct() {
+  const testimonials = await getTestimonials()
+  
   return (
     <div className="flex justify-between">
       {
-        toRender.map(customer => {
-          return <Testimonial key={customer.id} customer={customer} />
+        testimonials.map(testimonial => {
+          return <Testimonial key={testimonial.sys.id} testimonial={testimonial.fields} />
         })    
       }
     </div>
