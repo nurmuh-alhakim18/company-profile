@@ -15,6 +15,9 @@ export default function RootLayout({ children }) {
         <Providers>
           <MyNavbar />
           {children}
+          <footer className="text-center bg-amber-600 text-white font-bold py-3">
+            🎂 Serving you since 2020 🎂 
+          </footer>
         </Providers>
       </body>
     </html>
