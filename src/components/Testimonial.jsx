@@ -1,8 +1,6 @@
 import Image from "next/image"
 
 export default function Testimonial({ testimonial }) {
-  console.log(testimonial)
-
   return (
     <div className="flex flex-col items-center border border-solid rounded-3xl ring-offset-slate-50 w-96">
       <div>
