@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <header className="flex gap-40 items-center text-amber-600">
-        <Image src="/images/our-story.jpg" height={500} width={500} alt="Our story"/>
+        <Image src="/images/our-story.jpg" height={600} width={600} alt="Our story"/>
         <div className="max-w-md flex flex-col gap-6">
           <h3 className="text-2xl font-light">About Doffy Puffy</h3>
           <h1 className="text-7xl font-semibold">Our Story</h1>
