@@ -8,7 +8,7 @@ export default function Testimonial({ testimonial }) {
       </div>
       <div className="p-10 text-center flex flex-col justify-between">
         <h5 className="text-amber-600 font-semibold text-3xl">{ testimonial.name }</h5>
-        <p>{ testimonial.description }</p>
+        <p className="font-thin">{ testimonial.description }</p>
       </div>
     </div>
   )

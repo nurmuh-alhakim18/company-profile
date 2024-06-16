@@ -17,7 +17,7 @@ export default function TeamCard({ person, pos, exp }) {
           )
         }
         <p className="font-medium">{ pos }</p>
-        <p>{ exp }</p>
+        <p className="font-thin">{ exp }</p>
       </div>
     </div>
   )

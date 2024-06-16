@@ -13,10 +13,10 @@ export default function ProductCard({ product }) {
   }
 
   if (readMore) {
-    button = <button className="text-amber-600 font-semibold hover:text-amber-800" onClick={handleReadMore}>Read Less</button>
+    button = <button className="text-amber-600 font-semibold hover:text-amber-800 mt-2" onClick={handleReadMore}>Read Less</button>
   } else {
     readComponent = product.description.substring(0, 100)
-    button = <button className="text-amber-600 font-semibold hover:text-amber-800" onClick={handleReadMore}>Read More</button>
+    button = <button className="text-amber-600 font-semibold hover:text-amber-800 mt-2" onClick={handleReadMore}>Read More</button>
   }
 
   return (
@@ -27,7 +27,7 @@ export default function ProductCard({ product }) {
         </div>
         <div className="px-10 pt-10 pb-5 text-justify flex flex-col justify-between">
           <h5 className="text-amber-600 font-semibold text-3xl">{ product.name }</h5>
-          <h5 className="text-amber-600 font-light text-xl">Rp. { product.price }</h5>
+          <h5 className="text-amber-600 font-light text-xl my-2">Rp. { product.price }</h5>
           <p className="font-thin">{ readComponent }</p>
           { button }
         </div>
