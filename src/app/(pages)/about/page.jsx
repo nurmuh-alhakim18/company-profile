@@ -1,6 +1,6 @@
 import RenderMilestones from "@/components/RenderMilestone"
 import RenderTeams from "@/components/RenderTeams"
-// import TeamCard from "@/components/TeamCard"
+import RenderValues from "@/components/RenderValues"
 import Image from "next/image"
 
 export default function Page() {
@@ -56,6 +56,10 @@ export default function Page() {
         <div>
           <h1 className="text-7xl text-center font-semibold text-amber-600 mb-10">Milestone</h1>
           <RenderMilestones />
+        </div>
+        <div>
+          <h1 className="text-7xl text-center font-semibold text-amber-600 mb-10">What we value</h1>
+          <RenderValues />
         </div>
       </main>
     </>
